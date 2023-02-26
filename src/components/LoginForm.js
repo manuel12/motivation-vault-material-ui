@@ -10,22 +10,22 @@ const LoginForm = () => {
           marginTop: "200px",
         }}
       >
-        <Box
-          component="form"
-          sx={{
-            width: "500px",
-            mx: "auto",
-          }}
-        >
-          <Stack spacing={2}>
+        <Box component="form">
+          <Stack
+            spacing={2}
+            sx={{
+              maxWidth: "500px",
+              mx: "auto",
+            }}
+          >
             <TextField
-              id="outlined-basic"
+              id="username-input"
               label="Enter username"
               variant="outlined"
             />
 
             <TextField
-              id="outlined-basic"
+              id="password-input"
               label="Enter password"
               variant="outlined"
             />
@@ -34,14 +34,14 @@ const LoginForm = () => {
               <Button
                 variant="contained"
                 style={{
-                  width: "500px",
-                  margin: "10px auto 20px",
+                  margin: "10px 150px 20px",
+                  width: "200px",
                   backgroundColor: "#ffc93d",
                 }}
               >
                 Login
               </Button>
-              <Typography>
+              <Typography align="center">
                 You already have an account? Register here!
               </Typography>
             </Box>
