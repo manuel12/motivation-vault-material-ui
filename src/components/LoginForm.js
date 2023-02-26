@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button, Container, TextField, Typography } from "@mui/material";
 import { Box, Stack } from "@mui/system";
 
 const LoginForm = () => {
+  const [isLoginView, setLoginView] = useState(true);
+  const toggleViewClickedHandler = (bool) => {
+    setLoginView(bool);
+  };
+
   return (
     <main>
       <Container
@@ -41,9 +46,38 @@ const LoginForm = () => {
               >
                 Login
               </Button>
-              <Typography align="center">
-                You already have an account? Register here!
-              </Typography>
+
+              {isLoginView ? (
+                <p onClick={() => toggleViewClickedHandler(false)}>
+                  <Typography align="center">
+                    You already have an account?{" "}
+                    <span
+                      style={{
+                        fontWeight: "bold",
+                        color: "orange",
+                        cursor: "pointer",
+                      }}
+                    >
+                      Register here!
+                    </span>
+                  </Typography>
+                </p>
+              ) : (
+                <p onClick={() => toggleViewClickedHandler(true)}>
+                  <Typography align="center">
+                    You already have an account?{" "}
+                    <span
+                      style={{
+                        fontWeight: "bold",
+                        color: "orange",
+                        cursor: "pointer",
+                      }}
+                    >
+                      Login here!
+                    </span>
+                  </Typography>
+                </p>
+              )}
             </Box>
           </Stack>
         </Box>
