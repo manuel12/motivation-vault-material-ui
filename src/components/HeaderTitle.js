@@ -1,7 +1,7 @@
-import * as React from "react";
+import React from "react";
 import { AppBar, Toolbar, Typography } from "@mui/material";
-
 import { CssBaseline } from "@material-ui/core";
+import Navbar from "./Navbar";
 
 const HeaderTitle = () => {
   return (
@@ -23,6 +23,7 @@ const HeaderTitle = () => {
             Motivation Vault
           </Typography>
         </Toolbar>
+        <Navbar />
       </AppBar>
     </>
   );
